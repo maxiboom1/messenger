@@ -1,6 +1,18 @@
 html, body, #root {
+  background-color: #e7eaf6;
   margin:0;
   height: 100%;
-  color: rgb(41, 63, 31);
-  direction:ltr 
+  color: #113f67;
+  direction:ltr;
+  font-family: sans-serif;
+}
+
+a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #1475ca;
+}
+
+a:hover{
+  color: orangered;
 }

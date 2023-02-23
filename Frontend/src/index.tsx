@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import AuthMenu from './Components/AuthArea/AuthMenu/AuthMenu';
 import Layout from './Components/LayoutArea/Layout/Layout';
 import './index.css';
 
@@ -9,8 +10,9 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-    <BrowserRouter>
-      <Layout />
-    </BrowserRouter>
+  <BrowserRouter>
+    <AuthMenu />
+    {/* <Layout /> */}
+  </BrowserRouter>
 );
 

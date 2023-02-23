@@ -1,0 +1,18 @@
+.GreetingPage {
+  width: 80%;
+	margin: 22% auto;
+  text-align: center;
+}
+
+.greeting-body {
+  align-content: center;
+}
+
+.icons{
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto; 
+}
+
