@@ -1,4 +1,5 @@
 import "./Login.css";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import CredentialsModel from "../../../Models/CredentialsModel";
 import authService from "../../../Services/AuthService";
@@ -35,7 +36,3 @@ function Login(): JSX.Element {
 }
 
 export default Login;
-function useForm<T>(): { register: any; handleSubmit: any; } {
-    throw new Error("Function not implemented.");
-}
-
