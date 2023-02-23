@@ -9,7 +9,7 @@ function LoginRegister(): JSX.Element {
             <Login />
             {/* <NavLink to="/home">Login</NavLink> */}
             <h3>Not a member yet?</h3>
-            <NavLink to="/home">Join us</NavLink>
+            <NavLink to="/register">Join us</NavLink>
         </div>
     );
 }
