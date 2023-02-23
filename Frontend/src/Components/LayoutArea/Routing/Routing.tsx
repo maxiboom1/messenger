@@ -15,7 +15,7 @@ function Routing(): JSX.Element {
             <Route path="/" element={<Layout />} />
 
             {/* Home Page: */}
-            <Route path="/main" element={<Layout />} />
+            {/* <Route path="/main" element={<Layout />} /> */}
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<AuthMenu />} />
 

@@ -7,10 +7,11 @@ function Header(): JSX.Element {
     function logout(): void {
         authService.logout();
         alert("Bye!");
+        window.location.reload();
     }
     return (
         <div className="Header">
-            <NavLink to="/login" onClick={logout}>Logout</NavLink>
+            <NavLink to="/" onClick={logout}>Logout</NavLink>
         </div>
     );
 }

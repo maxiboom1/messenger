@@ -13,10 +13,8 @@ function Login(): JSX.Element {
         try {
             await authService.login(credentials);
             alert("nice");
-            // send to backend for validation
-            // await token 
-            // redirect to chatPage -> navigate("/home")
-            navigate("/main");
+            window.location.reload();
+            // navigate("/"); DOESNT WORK
         } catch (err: any) {
             alert(err.message);
         }

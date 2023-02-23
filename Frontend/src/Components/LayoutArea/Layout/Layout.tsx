@@ -20,6 +20,7 @@ function Layout(): JSX.Element {
         }
     }, []);
 
+    // had to use if-else and not conditional rendering with && because the latter ruins CSS of AuthMenu
 
     if (isAuthorized) {
         return (
