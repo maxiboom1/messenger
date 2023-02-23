@@ -5,6 +5,8 @@ class AppConfig {
 
     public registerUrl = "http://localhost:3600/api/register";
     public loginUrl = "http://localhost:3600/api/login";
+
+    public usersUrl = this.backendUrl + this.restApiPort + "/api/home"
 }
 
 const appConfig = new AppConfig();

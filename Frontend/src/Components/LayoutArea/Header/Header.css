@@ -1,3 +1,10 @@
 .Header {
- 
+ margin-left: 102%;
+ margin-top: 3px;
+}
+
+.Header > a {
+  /* background-color: wheat; */
+  padding: 5px;
+  /* border-radius: 0 12px 0 0; */
 }

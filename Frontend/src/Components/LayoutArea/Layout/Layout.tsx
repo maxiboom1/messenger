@@ -38,9 +38,9 @@ function Layout(): JSX.Element {
                         <ControlPanel />
                     </aside>
 
-                    <footer>
+                    {/* <footer>
                         <Footer />
-                    </footer>
+                    </footer> */}
                 </div>
             </SocketContext.Provider>
         );
