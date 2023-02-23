@@ -5,9 +5,12 @@ import appConfig from "./4-utils/app-config";
 import productsRoute from "./6-routes/messenger-routes";
 import authRoute from "./6-routes/auth-routes";
 import { Server } from "socket.io";
+import cors from "cors";
 
 // Create server: 
 const server = express();
+
+server.use(cors(({origin: "http://localhost:3000"}))); // our frontend
 
 // Create request.body object if json was sent:
 server.use(express.json());
@@ -27,6 +30,7 @@ server.listen(appConfig.port, () => console.log("Listening on http://localhost:"
 
 // 
 const io = new Server(3601, { cors: { origin: '*' } });
+
 
 io.on("connect", (socket) => {
     
