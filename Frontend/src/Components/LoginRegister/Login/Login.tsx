@@ -1,19 +1,23 @@
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
-
+import CredentialsModel from "../../../Models/CredentialsModel";
+import authService from "../../../Services/AuthService";
 
 function Login(): JSX.Element {
+
+    const { register, handleSubmit } = useForm<CredentialsModel>();
     const navigate = useNavigate();
 
-    async function handleSubmit(e: any) {
-        e.preventDefault();
+    async function send(credentials: CredentialsModel) {
         try {
+            await authService.login(credentials);
+            alert("nice");
             // send to backend for validation
             // await token 
             // redirect to chatPage -> navigate("/home")
             // navigate("/chatRooms")
-        } catch {
-            // err 
+        } catch (err: any) {
+            alert(err.message);
         }
     }
 
@@ -21,9 +25,9 @@ function Login(): JSX.Element {
 
     return (
         <div className="Login">
-            <form onSubmit={handleSubmit}>
-                <input placeholder="JohnDoe123" type="text" />
-                <input placeholder="my_password" type="password" />
+            <form onSubmit={handleSubmit(send)}>
+                <input placeholder="JohnDoe123" type="text" {...register("username")} />
+                <input placeholder="my_password" type="password" {...register("password")} />
                 <button>Start Chatting!</button>
             </form >
         </div>
@@ -31,3 +35,7 @@ function Login(): JSX.Element {
 }
 
 export default Login;
+function useForm<T>(): { register: any; handleSubmit: any; } {
+    throw new Error("Function not implemented.");
+}
+
