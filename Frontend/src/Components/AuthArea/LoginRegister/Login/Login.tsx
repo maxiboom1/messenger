@@ -1,8 +1,8 @@
 import "./Login.css";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import CredentialsModel from "../../../Models/CredentialsModel";
-import authService from "../../../Services/AuthService";
+import CredentialsModel from "../../../../Models/CredentialsModel";
+import authService from "../../../../Services/AuthService";
 
 function Login(): JSX.Element {
 
@@ -16,7 +16,7 @@ function Login(): JSX.Element {
             // send to backend for validation
             // await token 
             // redirect to chatPage -> navigate("/home")
-            // navigate("/chatRooms")
+            navigate("/main");
         } catch (err: any) {
             alert(err.message);
         }

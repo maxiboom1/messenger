@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import Login from "../../LoginRegister/Login/Login";
+import Login from "./Login/Login";
 import "./LoginRegister.css";
 
 function LoginRegister(): JSX.Element {
