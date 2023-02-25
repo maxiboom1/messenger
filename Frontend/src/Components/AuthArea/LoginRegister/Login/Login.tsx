@@ -66,7 +66,8 @@ function Login(props: any): JSX.Element {
                     />
                 </div>
 
-                <button disabled={formIsValid}>Start Chatting!</button>
+                <button
+                    disabled={!formIsValid}>Start Chatting!</button>
             </form >
         </div>
     );
