@@ -29,3 +29,15 @@ button{
 button:hover{
   padding: 11px;
 }
+
+/* .control input:focus {
+  outline: none;
+  border-color: #4f005f;
+  background: #f6dbfc;
+} */
+
+.invalid input {
+  border: 2px solid red;
+  border-color: red;
+  background: #fbdada;
+}
