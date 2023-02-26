@@ -7,7 +7,6 @@ function LoginRegister(): JSX.Element {
         <div className="LoginRegister">
             <h1>Welcome back.</h1>
             <Login />
-            {/* <NavLink to="/home">Login</NavLink> */}
             <h3>Not a member yet?</h3>
             <NavLink to="/register">Join us</NavLink>
         </div>

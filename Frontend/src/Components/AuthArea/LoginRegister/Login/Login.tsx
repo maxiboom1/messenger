@@ -37,7 +37,7 @@ function Login(props: any): JSX.Element {
     }
 
     function validatePassword(): void {
-        setValidPassword(enteredPassword.length >= 6);
+        setValidPassword(enteredPassword.length >= 5);
     }
 
     return (

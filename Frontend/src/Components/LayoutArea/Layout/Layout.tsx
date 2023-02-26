@@ -6,6 +6,7 @@ import ControlPanel from "../ControlPanel/ControlPanel";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
+import Routing from "../Routing/Routing";
 import "./Layout.css";
 
 function Layout(): JSX.Element {
@@ -31,8 +32,12 @@ function Layout(): JSX.Element {
                     </header>
 
                     <main>
-                        <Main />
+                        <Routing />
                     </main>
+
+                    {/* <main>
+                        <Main />
+                    </main> */}
 
                     <aside>
                         <ControlPanel />
