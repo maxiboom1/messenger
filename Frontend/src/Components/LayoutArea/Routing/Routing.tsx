@@ -1,23 +1,26 @@
-import { Routes, Route } from "react-router-dom";
-import { authStore } from "../../../Redux/AuthState";
-import AuthMenu from "../../AuthArea/AuthMenu/AuthMenu";
-import Register from "../../AuthArea/LoginRegister/Register/Register";
-import Layout from "../Layout/Layout";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Login from "../../AuthArea/Login/Login";
+import Profile from "../Profile/Profile";
 import Main from "../Main/Main";
 import "./Routing.css";
 
 function Routing(): JSX.Element {
-
     return (
+        
         <Routes>
-
-            {/* default route */}
-            <Route path="/" element={<Layout />} />
+            
+            {/* Default Route: */}
+            <Route path="/" element={<Navigate to="/main" />} />
 
             {/* Home Page: */}
-            {/* <Route path="/main" element={<Layout />} /> */}
-            <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<AuthMenu />} />
+            <Route path="/main" element= {<Main />} />
+            
+            {/* Login Page: */}
+            <Route path="/login" element= {<Login />} />
+
+            {/* Login Page: */}
+            <Route path="/chatroom" element= {<Profile />} />
+
 
         </Routes>
     );

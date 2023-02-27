@@ -1,16 +1,15 @@
 import axios from "axios";
 import CredentialsModel from "../Models/CredentialsModel";
-import UserModel from "../Models/UserModel";
 import { AuthActionType, authStore } from "../Redux/AuthState";
 import appConfig from "../Utils/AppConfig";
 
 class AuthService {
   // REGISTER
-  public async register(user: UserModel): Promise<void>{
-    const reponse = await axios.post<string>(appConfig.registerUrl, user);
-    const token = reponse.data;
-    authStore.dispatch({type: AuthActionType.Register, payload: token});
-  }
+//   public async register(user: UserModel): Promise<void>{
+//     const reponse = await axios.post<string>(appConfig.registerUrl, user);
+//     const token = reponse.data;
+//     authStore.dispatch({type: AuthActionType.Register, payload: token});
+//   }
 
   // LOGIN
   public async login(credentials: CredentialsModel): Promise <void>{
@@ -19,7 +18,7 @@ class AuthService {
     authStore.dispatch({type: AuthActionType.Login, payload: token});
   }
 
-  // LOGOUT
+  //LOGOUT
  public logout(): void {
   authStore.dispatch({type: AuthActionType.Logout});
  }

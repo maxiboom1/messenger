@@ -1,12 +1,23 @@
-class AppConfig {
+class AppConfig{
     public socketPort = "3601";
     public restApiPort = "3600";
-    public backendUrl = "http://localhost:";
+    
+    // Our public server 
+    public backendUrl = "http://62.90.145.124:";
+    
+    // localhost
+    //public backendUrl = "http://localhost:";
 
-    public registerUrl = "http://localhost:3600/api/register";
-    public loginUrl = "http://localhost:3600/api/login";
+    public registerUrl = "/api/register";
+    public usersUrl = "/api/home";
 
-    public usersUrl = this.backendUrl + this.restApiPort + "/api/home"
+    public loginUrl = this.backendUrl + this.restApiPort + "/api/login";
+    
+    public getAllUsersUrl = this.backendUrl + this.restApiPort + "/api/home";
+    
+    //http://localhost:4000/api/message/:userId1:userId2
+    public get2UsersHistory = this.backendUrl + this.restApiPort + "/api/chat/"; // + :userId1:userId2
+
 }
 
 const appConfig = new AppConfig();

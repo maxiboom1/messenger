@@ -1,4 +1,4 @@
-/* .AuthMenu {
+.AuthMenu {
     display:flex;
     justify-content: flex-end;
     padding-top: 10px;
@@ -6,25 +6,4 @@
 
 .AuthMenu > a{
     margin-left: 15px;
-} */
-
-.AuthMenu {
-    height: 75%;
-    width: 55%;
-    margin: 5% auto;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
-    display: flex;
-}
-
-.login-register{
-    background-color: white;
-    width: 50%;
-    border-radius: 12px 0 0 12px ;
-}
-
-.greeting-page {
-    background-color:#a2a8d3;
-    width: 50%;
-    border-radius: 0 12px 12px 0;
 }

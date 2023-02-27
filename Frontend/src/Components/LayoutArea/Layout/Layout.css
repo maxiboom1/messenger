@@ -1,44 +1,20 @@
 .Layout {
-    height: 90%;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 2%;
-    border-radius: 12px;
+    height: 100%;
     box-sizing: border-box;
     display: grid;
-    grid-template-rows: 5% 94.5% 5%;   
+    grid-template-rows: 5% 90% 5%;   
     grid-template-columns: repeat(6, 1fr); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.55);
 }
 
-.Layout > header {
-    grid-column: span 5;
-    background-color: whitesmoke;
-    border-radius: 12px 12px 0 0;
-    /* background-color:#a2a8d3; */
+.Layout > header, .Layout > footer {
+    grid-column: span 6;
 }
 
 .Layout > main {
     grid-column: span 5;
     overflow: auto;
-    background-color: whitesmoke;
-    border-radius: 0 0 0 12px;
 }
 
 .Layout, .Layout > * {
-    border: 1px solid rgb(235, 235, 235);
-    background-color: whitesmoke;
+    border: 1px solid;
 }
-
-.Layout > aside {
-    background-color:rgb(235, 235, 235);
-    border-radius: 0 0 12px 0;
-}
-
-
-
-
-
-/* .Layout > footer {
-    border-radius: 0px 0px 12px 12px;
-} */

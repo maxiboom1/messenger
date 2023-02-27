@@ -10,7 +10,9 @@ import cors from "cors";
 // Create server: 
 const server = express();
 
-server.use(cors(({origin: "http://localhost:3000"}))); // our frontend
+// CORS
+
+server.use(cors({origin:"http://localhost:3000"}));
 
 // Create request.body object if json was sent:
 server.use(express.json());
@@ -25,12 +27,11 @@ server.use(routeNotFound);
 // Handle catch-all: 
 server.use(catchAll);
 
-// Run server:
+// Run server on port 3600:
 server.listen(appConfig.port, () => console.log("Listening on http://localhost:" + appConfig.port));
 
 // 
 const io = new Server(3601, { cors: { origin: '*' } });
-
 
 io.on("connect", (socket) => {
     

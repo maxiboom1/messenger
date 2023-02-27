@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import Login from "./Login/Login";
+import Login from "../../LoginRegister/Login/Login";
 import "./LoginRegister.css";
 
 function LoginRegister(): JSX.Element {
@@ -7,8 +7,9 @@ function LoginRegister(): JSX.Element {
         <div className="LoginRegister">
             <h1>Welcome back.</h1>
             <Login />
+            {/* <NavLink to="/home">Login</NavLink> */}
             <h3>Not a member yet?</h3>
-            <NavLink to="/register">Join us</NavLink>
+            <NavLink to="/home">Join us</NavLink>
         </div>
     );
 }
