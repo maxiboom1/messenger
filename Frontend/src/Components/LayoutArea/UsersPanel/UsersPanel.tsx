@@ -17,11 +17,9 @@ function ControlPanel(): JSX.Element {
   const [usersList, setUsersList] = useState<UserListModel[]>();
 
   useEffect(() => {
-
     const unsubscribe = usersStore.subscribe(() => {
       setUsersList(usersStore.getState().users);
     });
-
   }, [])
 
   async function clickHandler(key: number) {
@@ -30,19 +28,21 @@ function ControlPanel(): JSX.Element {
     const usersMessages = await usersService.getUsersMessages(userId1, userId2);
   }
 
+
   return (
-    <TableContainer component={Paper}>
+    <TableContainer className="usersTable" component={Paper}>
       <Table sx={{ minWidth: 100 }} size="medium">
         <TableBody>
 
           {usersList?.map((user) => (
             <TableRow hover key={user.userId} onClick={key => clickHandler(user.userId)}>
-              <TableCell component="th" scope="row" > {user.username} </TableCell>
+              <TableCell component="th" scope="row" > {user.username} {`${user.isOnline ? 'online' : 'offline'}`} </TableCell>
             </TableRow>
           ))}
 
         </TableBody>
       </Table>
+
     </TableContainer>
   );
 

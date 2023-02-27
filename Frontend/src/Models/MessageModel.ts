@@ -6,7 +6,7 @@ class MessageModel {
     public senderUserId: number;
     public recipientUserId: number;
     
-    public senderUsername: string;
+    public username: string;
 
 }
 

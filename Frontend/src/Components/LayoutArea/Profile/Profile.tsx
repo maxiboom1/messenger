@@ -31,7 +31,7 @@ function Profile(): JSX.Element {
         return () => unsubscribe();
     }, [])
 
-    console.log("this is chat" + JSON.stringify(chat))
+    console.log(JSON.stringify(chat));
 
     function formatDate(date: any) {
         let d = new Date(date),
