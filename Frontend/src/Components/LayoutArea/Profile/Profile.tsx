@@ -31,6 +31,25 @@ function Profile(): JSX.Element {
         return () => unsubscribe();
     }, [])
 
+    console.log("this is chat" + JSON.stringify(chat))
+
+    function formatDate(date: any) {
+        let d = new Date(date),
+            hours = '' + (d.getHours()),
+            minutes = '' + (d.getMinutes()),
+            seconds = '' + (d.getSeconds()),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+
+        if (month.length < 2)
+            month = '0' + month;
+        if (day.length < 2)
+            day = '0' + day;
+
+        return [year, month, day].join('-') + ' ' + [hours, minutes, seconds].join(':')
+    };
+
     return (
         <div className="Profile">
             <h3>Here will be personal page</h3>
@@ -42,7 +61,9 @@ function Profile(): JSX.Element {
 
                         {chat?.map((msg) => (
                             <TableRow hover key={msg.messageId}>
-                                <TableCell component="th" scope="row"> Sender {msg.senderUserId}: {msg.messageBody} </TableCell>
+                                <TableCell component="th" scope="row">
+                                    Sender {msg.senderUserId}: {msg.messageBody} Date: {formatDate(msg.messageDate)}
+                                </TableCell>
                             </TableRow>
                         ))}
 

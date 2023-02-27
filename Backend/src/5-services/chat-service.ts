@@ -48,3 +48,10 @@ export default {
     postMessage,
     getTwoUsersMessagesList
 };
+
+// SELECT * FROM messages WHERE senderUserId = 1 AND recipientUserId = 2
+// UNION
+// SELECT * FROM messages WHERE senderUserId = 2 AND recipientUserId = 1
+// ORDER BY messageDate
+// UNION 
+// SELECT users.username FROM users JOIN messages ON messages.senderUserId = users.userId
