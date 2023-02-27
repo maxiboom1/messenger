@@ -32,10 +32,11 @@ async function getTwoUsersMessagesList(userId1: number, userId2: number): Promis
     // TODO validation...
 
     const sql = `
-    SELECT * FROM messages WHERE senderUserId = ${userId1} AND recipientUserId = ${userId2}
+    SELECT M.*, U.username FROM (SELECT * FROM messages WHERE senderUserId = ${userId1} AND recipientUserId = ${userId2}
     UNION
     SELECT * FROM messages WHERE senderUserId = ${userId2} AND recipientUserId = ${userId1}
-    ORDER BY messageDate;
+    ORDER BY messageDate) as M JOIN users as U ON M.senderUserId = U.userId
+   ;
     `
     const twoUsersMessagesList = await dal.execute(sql);
   
@@ -49,9 +50,3 @@ export default {
     getTwoUsersMessagesList
 };
 
-// SELECT * FROM messages WHERE senderUserId = 1 AND recipientUserId = 2
-// UNION
-// SELECT * FROM messages WHERE senderUserId = 2 AND recipientUserId = 1
-// ORDER BY messageDate
-// UNION 
-// SELECT users.username FROM users JOIN messages ON messages.senderUserId = users.userId
