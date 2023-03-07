@@ -1,6 +1,5 @@
 import axios from "axios";
 import UserListModel from "../Models/UserListModel";
-import { authStore } from "../Redux/AuthState";
 import appConfig from "../Utils/AppConfig";
 
 class UsersService {
