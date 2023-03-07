@@ -51,6 +51,7 @@ function socketLogic(){
         socket.on("disconnect", (reason) => {
           console.log(`socket ${socket.id} disconnected due to ${reason}`);
         });
+        
       });
     
 }

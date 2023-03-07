@@ -15,7 +15,7 @@ class AuthService {
   }
 
   //LOGOUT
- public logout(): void {
+ public logout(): void { 
   authStore.dispatch({type: AuthActionType.Logout});
  }
 }
