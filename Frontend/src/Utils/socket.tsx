@@ -1,3 +1,5 @@
+/*
+
 import { createContext } from "react";
 import io from "socket.io-client";
 import { MessageModelWithUsernames } from "../Models/MessageModel";
@@ -18,3 +20,5 @@ socket.on("new_message", async (msg: MessageModelWithUsernames) => {
 });
   
 export const SocketContext = createContext(socket);
+
+*/
