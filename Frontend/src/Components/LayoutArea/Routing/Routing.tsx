@@ -3,6 +3,7 @@ import Login from "../../AuthArea/Login/Login";
 import Profile from "../Profile/Profile";
 import Main from "../Main/Main";
 import "./Routing.css";
+import Register from "../../AuthArea/Register/Register";
 
 function Routing(): JSX.Element {
     return (
@@ -17,6 +18,9 @@ function Routing(): JSX.Element {
             
             {/* Login Page: */}
             <Route path="/login" element= {<Login />} />
+
+            {/* Register Page: */}
+            <Route path="/register" element= {<Register />} />
 
             {/* Login Page: */}
             <Route path="/chatroom" element= {<Profile />} />
