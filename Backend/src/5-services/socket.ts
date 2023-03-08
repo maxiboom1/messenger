@@ -9,7 +9,7 @@ function socketLogic(){
     const io = new Server(3601, { cors: { origin: '*' } });
 
     io.on("connect", (socket) => {
-            
+        //console.log("connected new socket:" + socket.id);
         socket.on('new_client', (userId:number) => { 
           
           onlineUsers.push({

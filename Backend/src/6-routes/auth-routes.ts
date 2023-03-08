@@ -20,6 +20,7 @@ router.post("/register", async (request: Request, response: Response, next: Next
 // POST http://localhost:4000/api/login
 router.post("/login", async (request: Request, response: Response, next: NextFunction) => {
     try {
+        console.log(request.body);
         const credentials = new CredentialsModel(request.body);
         const token = await authService.login(credentials);
         response.json(token);
